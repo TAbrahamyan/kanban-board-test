@@ -1,0 +1,87 @@
+.cards {
+  display: flex;
+  overflow: auto;
+  height: calc(100vh - 60px);
+
+  .card {
+    margin: 1rem;
+    min-width: 200px;
+    width: 300px;
+
+    h1 {
+      color: $white;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: $defaultSpace;
+      margin: 0;
+    }
+
+    .card-items {
+      background: #2F3135;
+
+      .add-card {
+        display: flex;
+        align-items: center;
+        padding: 0.2rem $defaultSpace;
+        color: $defaultTextColor;
+        cursor: pointer;
+        label { font-size: 2rem; margin-right: $defaultSpace }
+        &:hover { background: #27272D }
+      }
+
+      .item {
+        background: $defaultBackgroundColor;
+        padding: $defaultSpace;
+        margin: $defaultSpace;
+        b { color: $white }
+        p, span { color: $defaultTextColor }
+        p { word-break: break-word }
+
+        span {
+          float: right;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .add-card-textfield {
+        margin: $defaultSpace;
+
+        div {
+          display: flex;
+          align-items: center;
+
+          button {
+            height: 35px;
+            width: 100%;
+            background: #626064;
+            color: #A0A0A3;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            &:hover { background: $cardBackground }
+            &:disabled { background: #626064; cursor: not-allowed }
+          }
+
+          .close {
+            font-size: 3rem;
+            margin-left: 0.4rem;
+            color: $defaultTextColor;
+            cursor: pointer;
+          }
+        }
+
+        textarea {
+          padding: $defaultSpace;
+          resize: none;
+          outline: none;
+          background: $cardBackground;
+          color: $white;
+          width: 100%;
+          &::placeholder { color: $defaultTextColor }
+        }
+      }
+    }
+  }
+}

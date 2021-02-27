@@ -1,0 +1,6 @@
+@import '../variables';
+
+.home {
+  @import './home/header';
+  @import './home/cards';
+}
